@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script type="text/javascript" src="./index.js"></script>
+    <title>jwt-sample</title>
+  </head>
+  <style>
+    h1 {
+      font-size: 24px;
+      color: #666;
+    }
+    form {
+      display: block;
+      width: 500px;
+      margin: 5px 0px 10px 5px;
+      padding: 15px 10px;
+      border: 1px solid #999999;
+      border-radius: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 100%;
+    }
+    .token {
+      width: 400px;
+      height: 100px;
+    }
+    .expires {
+      display: inline-block;
+      margin-left: .5em;
+      font-size: smaller;
+      color: tomato;
+    }
+  </style>
+  <body>
+    <h1>jwt-sample</h1>
+    <form name="sign">
+      <label>username</label>
+      <input name="username" type="text" value="" />
+      <input name="signButton" type="button" value="sign" />
+    </form>
+    <form name="verify">
+      <label>token<span class="expires">*expires in 1m</span></label>
+      <textarea class="token" name="token"></textarea>
+      <input name="verifyButton" type="button" value="verify" />
+    </form>
+    <form name="decorded">
+      <label>decorded token</label>
+      <textarea class="token" name="decordedToken"></textarea>
+    </form>
+  </body>
+</html>
